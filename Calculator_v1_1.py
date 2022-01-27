@@ -17,7 +17,7 @@ def calculate():
         print("Δήλωσε: \n1. για πρόσθεση \n2. για αφαίρεση \n3. για πολλαπλασιασμό \n4. για διαίρεση")
     except:
         print("Λανθασμένη είσοδος.")
-    operation=input()
+    operation=input("Δοκιμάστε μια από τις διαθέσιμες επιλογές πράξεων: ")
     if operation=="1":
         print(num1,"+", num2,"=", add(num1, num2))
     elif operation=="2":
@@ -31,10 +31,10 @@ def calculate():
         again()
 
 def again():
-    calculate_again = input('Θέλετε να υπολογίσετε κάτι άλλο; \nΠληκτρολογήστε Y ή Ν για ΝΑΙ και ΟΧΙ αντίστοιχα: ')
-    if calculate_again=='Y':
+    calculate_again = input('Θέλετε να υπολογίσετε κάτι άλλο; \nΠληκτρολογήστε ΝΑΙ ή ΟΧΙ αντίστοιχα: ')
+    if calculate_again=='Nai' or calculate_again=='nai' or calculate_again=="NAI":
         calculate()
-    elif calculate_again=='N':
+    elif calculate_again=='Oxi' or calculate_again=='OXI' or calculate_again=='oxi':
         print('Καλή συνέχεια.')
         quit()
     else:
